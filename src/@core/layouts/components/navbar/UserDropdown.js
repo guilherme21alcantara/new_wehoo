@@ -46,7 +46,7 @@ const UserDropdown = () => {
         <DropdownItem divider />
         <DropdownItem tag={Link} to='/pages/account-settings'>
           <Settings size={14} className='mr-75' />
-          <span className='align-middle'>Settings</span>
+          <span className='align-middle'>Configuração</span>
         </DropdownItem>        
         <DropdownItem tag={Link} to='/login' onClick={() => dispatch(handleLogout())}>
           <Power size={14} className='mr-75' />

@@ -49,41 +49,37 @@ const NotificationDropdown = () => {
           <span className='font-weight-bolder'>Revised Order 👋</span>&nbsp;checkout
         </Media>
       )
-    },
-    {
-      title: <h6 className='font-weight-bolder mr-auto mb-0'>System Notifications</h6>,
-      switch: <CustomInput type='switch' id='primary' name='primary' inline defaultChecked />
-    },
-    {
-      avatarIcon: <X size={14} />,
-      color: 'light-danger',
-      subtitle: 'USA Server is down due to hight CPU usage',
-      title: (
-        <Media tag='p' heading>
-          <span className='font-weight-bolder'>Server down</span>&nbsp;registered
-        </Media>
-      )
-    },
-    {
-      avatarIcon: <Check size={14} />,
-      color: 'light-success',
-      subtitle: 'Last month sales report generated',
-      title: (
-        <Media tag='p' heading>
-          <span className='font-weight-bolder'>Sales report</span>&nbsp;generated
-        </Media>
-      )
-    },
-    {
-      avatarIcon: <AlertTriangle size={14} />,
-      color: 'light-warning',
-      subtitle: 'BLR Server using high memory',
-      title: (
-        <Media tag='p' heading>
-          <span className='font-weight-bolder'>High memory</span>&nbsp;usage
-        </Media>
-      )
     }
+    // {
+    //   avatarIcon: <X size={14} />,
+    //   color: 'light-danger',
+    //   subtitle: 'USA Server is down due to hight CPU usage',
+    //   title: (
+    //     <Media tag='p' heading>
+    //       <span className='font-weight-bolder'>Server down</span>&nbsp;registered
+    //     </Media>
+    //   )
+    // },
+    // {
+    //   avatarIcon: <Check size={14} />,
+    //   color: 'light-success',
+    //   subtitle: 'Last month sales report generated',
+    //   title: (
+    //     <Media tag='p' heading>
+    //       <span className='font-weight-bolder'>Sales report</span>&nbsp;generated
+    //     </Media>
+    //   )
+    // },
+    // {
+    //   avatarIcon: <AlertTriangle size={14} />,
+    //   color: 'light-warning',
+    //   subtitle: 'BLR Server using high memory',
+    //   title: (
+    //     <Media tag='p' heading>
+    //       <span className='font-weight-bolder'>High memory</span>&nbsp;usage
+    //     </Media>
+    //   )
+    // }
   ]
 
   // ** Function to render Notifications
@@ -150,22 +146,22 @@ const NotificationDropdown = () => {
       <DropdownToggle tag='a' className='nav-link' href='/' onClick={e => e.preventDefault()}>
         <Bell size={21} />
         <Badge pill color='danger' className='badge-up'>
-          5
+          3
         </Badge>
       </DropdownToggle>
       <DropdownMenu tag='ul' right className='dropdown-menu-media mt-0'>
         <li className='dropdown-menu-header'>
           <DropdownItem className='d-flex' tag='div' header>
-            <h4 className='notification-title mb-0 mr-auto'>Notifications</h4>
+            <h4 className='notification-title mb-0 mr-auto'>Notificações</h4>
             <Badge tag='div' color='light-primary' pill>
-              6 New
+              3 novas
             </Badge>
           </DropdownItem>
         </li>
         {renderNotificationItems()}
         <li className='dropdown-menu-footer'>
           <Button.Ripple color='primary' block>
-            Read all notifications
+            Ler todas as notificaçôes
           </Button.Ripple>
         </li>
       </DropdownMenu>

@@ -67,7 +67,6 @@ const CartDropdown = () => {
                           {item.name}
                         </Link>
                       </h6>
-                      <small className='cart-item-by'>by {item.brand}</small>
                     </div>
                     <div className='cart-item-qty'>
                       <NumberInput
@@ -79,7 +78,7 @@ const CartDropdown = () => {
                         style={{ width: '7rem', height: '2.15rem' }}
                       />
                     </div>
-                    <h5 className='cart-item-price'>${item.price}</h5>
+                    <h5 className='cart-item-price'>R${item.price}</h5>
                   </Media>
                 </Media>
               )
@@ -88,16 +87,16 @@ const CartDropdown = () => {
           <li className='dropdown-menu-footer'>
             <div className='d-flex justify-content-between mb-1'>
               <h6 className='font-weight-bolder mb-0'>Total:</h6>
-              <h6 className='text-primary font-weight-bolder mb-0'>${Number(total.toFixed(2))}</h6>
+              <h6 className='text-primary font-weight-bolder mb-0'>R${Number(total.toFixed(2))}</h6>
             </div>
             <Button.Ripple tag={Link} to='/apps/ecommerce/checkout' color='primary' block onClick={toggle}>
-              Checkout
+              finalizar compra
             </Button.Ripple>
           </li>
         </Fragment>
       )
     } else {
-      return <p className='m-0 p-1 text-center'>Your cart is empty</p>
+      return <p className='m-0 p-1 text-center'>Seu carrinho esta vazio</p>
     }
   }
 
@@ -114,9 +113,9 @@ const CartDropdown = () => {
       <DropdownMenu right tag='ul' className='dropdown-menu-media dropdown-cart mt-0'>
         <li className='dropdown-menu-header'>
           <DropdownItem tag='div' className='d-flex' header>
-            <h4 className='notification-title mb-0 mr-auto'>My Cart</h4>
+            <h4 className='notification-title mb-0 mr-auto'>Carrinho</h4>
             <Badge color='light-primary' pill>
-              {store.cart.length || 0} Items
+              {store.cart.length || 0} Itens
             </Badge>
           </DropdownItem>
         </li>

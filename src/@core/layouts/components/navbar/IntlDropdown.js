@@ -14,9 +14,7 @@ const IntlDropdown = () => {
 
   // ** Vars
   const langObj = {
-    en: 'English',
-    de: 'German',
-    fr: 'French',
+   // en: 'English',
     pt: 'Portuguese'
   }
 
@@ -31,29 +29,12 @@ const IntlDropdown = () => {
       <DropdownToggle href='/' tag='a' className='nav-link' onClick={e => e.preventDefault()}>
         <ReactCountryFlag
           className='country-flag flag-icon'
-          countryCode={intlContext.locale === 'en' ? 'us' : intlContext.locale}
+          //countryCode={intlContext.locale === 'en' ? 'pt' : intlContext.locale}
+          countryCode='pt'
           svg
         />
         <span className='selected-language'>{langObj[intlContext.locale]}</span>
       </DropdownToggle>
-      <DropdownMenu className='mt-0' right>
-        <DropdownItem href='/' tag='a' onClick={e => handleLangUpdate(e, 'en')}>
-          <ReactCountryFlag className='country-flag' countryCode='us' svg />
-          <span className='ml-1'>English</span>
-        </DropdownItem>
-        <DropdownItem href='/' tag='a' onClick={e => handleLangUpdate(e, 'fr')}>
-          <ReactCountryFlag className='country-flag' countryCode='fr' svg />
-          <span className='ml-1'>French</span>
-        </DropdownItem>
-        <DropdownItem href='/' tag='a' onClick={e => handleLangUpdate(e, 'de')}>
-          <ReactCountryFlag className='country-flag' countryCode='de' svg />
-          <span className='ml-1'>German</span>
-        </DropdownItem>
-        <DropdownItem href='/' tag='a' onClick={e => handleLangUpdate(e, 'pt')}>
-          <ReactCountryFlag className='country-flag' countryCode='pt' svg />
-          <span className='ml-1'>Portuguese</span>
-        </DropdownItem>
-      </DropdownMenu>
     </UncontrolledDropdown>
   )
 }

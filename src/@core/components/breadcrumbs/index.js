@@ -60,10 +60,7 @@ const BreadCrumbs = props => {
               <Grid size={14} />
             </DropdownToggle>
             <DropdownMenu tag='ul' right>
-              <DropdownItem tag={Link} to='/apps/chat'>
-                <CheckSquare className='mr-1' size={14} />
-                <span className='align-middle'>Todo</span>
-              </DropdownItem>
+              
               <DropdownItem tag={Link} to='/apps/chat'>
                 <MessageSquare className='mr-1' size={14} />
                 <span className='align-middle'>Chat</span>

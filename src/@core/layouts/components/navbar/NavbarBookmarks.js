@@ -1,8 +1,5 @@
-// ** React Imports
 import { Fragment, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-
-// ** Third Party Components
 import * as Icon from 'react-feather'
 import classnames from 'classnames'
 import Autocomplete from '@components/autocomplete'
@@ -15,24 +12,16 @@ import {
   DropdownMenu,
   DropdownItem
 } from 'reactstrap'
-
-// ** Store & Actions
 import { useDispatch, useSelector } from 'react-redux'
 import { getBookmarks, updateBookmarked, handleSearchQuery } from '@store/actions/navbar'
 
-const NavbarBookmarks = props => {
-  // ** Props
-  const { setMenuVisibility } = props
 
-  // ** State
+const NavbarBookmarks = props => {
+  const { setMenuVisibility } = props
   const [value, setValue] = useState('')
   const [openSearch, setOpenSearch] = useState(false)
-
-  // ** Store Vars
   const dispatch = useDispatch()
   const store = useSelector(state => state.navbar)
-
-  // ** ComponentDidMount
   useEffect(() => {
     dispatch(getBookmarks())
   }, [])
@@ -58,7 +47,7 @@ const NavbarBookmarks = props => {
     }
   }
 
-  // ** If user has more than 10 bookmarks then add the extra Bookmarks to a dropdown
+
   const renderExtraBookmarksDropdown = () => {
     if (store.bookmarks.length && store.bookmarks.length >= 11) {
       return (
@@ -90,10 +79,7 @@ const NavbarBookmarks = props => {
     }
   }
 
-  // ** Removes query in store
   const handleClearQueryInStore = () => dispatch(handleSearchQuery(''))
-
-  // ** Loops through Bookmarks Array to return Bookmarks
   const onKeyDown = e => {
     if (e.keyCode === 27 || e.keyCode === 13) {
       setTimeout(() => {
@@ -103,10 +89,7 @@ const NavbarBookmarks = props => {
     }
   }
 
-  // ** Function to toggle Bookmarks
   const handleBookmarkUpdate = id => dispatch(updateBookmarked(id))
-
-  // ** Function to handle Bookmarks visibility
   const handleBookmarkVisibility = () => {
     setOpenSearch(!openSearch)
     setValue('')

@@ -70,10 +70,10 @@ const PagesRoutes = [
     path: '/pages/profile',
     component: lazy(() => import('../../views/pages/profile'))
   },
-  {
-    path: '/pages/faq',
-    component: lazy(() => import('../../views/pages/faq'))
-  },
+  // {
+  //   path: '/pages/faq',
+  //   component: lazy(() => import('../../views/pages/faq'))
+  // },
   {
     path: '/pages/knowledge-base',
     exact: true,
@@ -129,10 +129,10 @@ const PagesRoutes = [
     exact: true,
     component: () => <Redirect to='/pages/blog/edit/1' />
   },
-  {
-    path: '/pages/pricing',
-    component: lazy(() => import('../../views/pages/pricing'))
-  },
+  // {
+  //   path: '/pages/pricing',
+  //   component: lazy(() => import('../../views/pages/pricing'))
+  // },
   {
     path: '/misc/coming-soon',
     component: lazy(() => import('../../views/pages/misc/ComingSoon')),
